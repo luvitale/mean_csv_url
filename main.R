@@ -10,7 +10,16 @@ readURL <- function() {
   return(inputURL)
 }
 
+showOptions <- function() {
+  i <- 1
+  for(coldatacsv in colnames(datacsv)) {
+    print(paste(i, "->", coldatacsv))
+    i <- i + 1
+  }
+}
+
 csvurl <- readURL()
 csv <- read.csv(csvurl)
-df <- as.data.frame(csv)
-print(df)
+datacsv <- as.data.frame(csv)
+print("Ingresá un número para calcular la media de la columna especificada")
+showOptions()
