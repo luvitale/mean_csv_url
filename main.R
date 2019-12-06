@@ -11,10 +11,8 @@ readURL <- function() {
 }
 
 showOptions <- function(columnNames) {
-  i <- 1
-  for(columnName in columnNames) {
-    print(paste(i, "->", columnName))
-    i <- i + 1
+  for(i in 1:length(columnNames)) {
+    print(paste(i, "->", columnNames[i]))
   }
 }
 
